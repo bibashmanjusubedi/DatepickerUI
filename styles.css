@@ -9,13 +9,41 @@ body{
 }
 
 .datepicker{
-    background:blue;
+    background:white;
 }
 
 .datepicker-inputheader{
     display:flex;
     border:1px solid #ccc;
     border-radius: 4px;
-    width:200px;
-    padding: 5px;
+}
+
+.calender-header{
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.calender{
+    border:2px solid black;
+    border-radius: 6px;
+}
+
+.calender-header .month-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.calender-header .fa-chevron-right {
+    margin-left: auto; /* Pushes to far right */
+}
+
+.calender-header .fa-chevron-left{
+    margin-right: auto;
+}
+
+.calender-days{
+    display:flex;
+    justify-content: space-around;
 }
