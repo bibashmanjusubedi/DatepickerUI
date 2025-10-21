@@ -1,0 +1,151 @@
+<!-- Datepicker UI: HTML and CSS Only -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datepicker UI Example</title>
+  <style>
+    body {
+      background: #f5f6fa;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .datepicker {
+      background: #fff;
+      padding: 2rem 1.5rem 1.2rem 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 24px rgba(60,72,90,0.1);
+      width: 320px;
+    }
+    .datepicker-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .datepicker-month {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .datepicker-arrow {
+      background: #eee;
+      border: none;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #52616a;
+      transition: background 0.2s;
+    }
+    .datepicker-arrow:hover {
+      background: #dfe6e9;
+    }
+    .datepicker-days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.5rem;
+      text-align: center;
+      margin-bottom: 0.7rem;
+      font-size: 0.95rem;
+      color: #888;
+      font-weight: 500;
+    }
+    .datepicker-dates {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.5rem;
+    }
+    .datepicker-date {
+      padding: 0.7em;
+      border-radius: 6px;
+      background: none;
+      cursor: pointer;
+      color: #313e4e;
+      border: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .datepicker-date:hover {
+      background: #e1eaff;
+      color: #2471ff;
+    }
+    .datepicker-date.selected {
+      background: #2471ff;
+      color: #fff;
+      font-weight: bold;
+    }
+    /* Dim dates not in current month */
+    .datepicker-date.disabled {
+      color: #bbb;
+      cursor: default;
+    }
+  </style>
+</head>
+<body>
+  <div class="datepicker">
+    <div class="datepicker-header">
+      <button class="datepicker-arrow">&#8678;</button>
+      <span class="datepicker-month">October 2025</span>
+      <button class="datepicker-arrow">&#8680;</button>
+    </div>
+    <div class="datepicker-days">
+      <div>Su</div>
+      <div>Mo</div>
+      <div>Tu</div>
+      <div>We</div>
+      <div>Th</div>
+      <div>Fr</div>
+      <div>Sa</div>
+    </div>
+    <div class="datepicker-dates">
+      <button class="datepicker-date disabled"></button>
+      <button class="datepicker-date disabled"></button>
+      <button class="datepicker-date disabled"></button>
+      <button class="datepicker-date">1</button>
+      <button class="datepicker-date">2</button>
+      <button class="datepicker-date">3</button>
+      <button class="datepicker-date">4</button>
+      <!-- Repeat for the rest of the dates -->
+      <button class="datepicker-date">5</button>
+      <button class="datepicker-date">6</button>
+      <button class="datepicker-date">7</button>
+      <button class="datepicker-date">8</button>
+      <button class="datepicker-date">9</button>
+      <button class="datepicker-date">10</button>
+      <button class="datepicker-date">11</button>
+      <!-- ... -->
+      <button class="datepicker-date">12</button>
+      <button class="datepicker-date">13</button>
+      <button class="datepicker-date selected">14</button>
+      <button class="datepicker-date">15</button>
+      <button class="datepicker-date">16</button>
+      <button class="datepicker-date">17</button>
+      <button class="datepicker-date">18</button>
+      <!-- Continue through 31, add disabled for overflow... -->
+      <button class="datepicker-date">19</button>
+      <button class="datepicker-date">20</button>
+      <button class="datepicker-date">21</button>
+      <button class="datepicker-date">22</button>
+      <button class="datepicker-date">23</button>
+      <button class="datepicker-date">24</button>
+      <button class="datepicker-date">25</button>
+      <button class="datepicker-date">26</button>
+      <button class="datepicker-date">27</button>
+      <button class="datepicker-date">28</button>
+      <button class="datepicker-date">29</button>
+      <button class="datepicker-date">30</button>
+      <button class="datepicker-date">31</button>
+      <button class="datepicker-date disabled">1</button>
+      <button class="datepicker-date disabled">2</button>
+      <button class="datepicker-date disabled">3</button>
+    </div>
+  </div>
+</body>
+</html>
