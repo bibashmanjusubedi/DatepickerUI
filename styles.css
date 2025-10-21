@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.datepicker{
+    background:blue;
+}
+
+.datepicker-inputheader{
+    display:flex;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    width:200px;
+    padding: 5px;
+}
